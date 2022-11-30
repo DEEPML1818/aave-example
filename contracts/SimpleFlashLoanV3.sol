@@ -74,9 +74,6 @@ contract SimpleFlashLoanV3 is FlashLoanSimpleReceiverBase {
        
        
 
-        console.log("prints");
-        POOL.flashLoanSimple(address(this), token, amountIn, params, referralCode);
-        console.log("win");
        
          TransferHelper.safeApprove(token, address(0x794a61358D6845594F94dc1DB02A252b5b4814aD), amountIn);
         IERC20(token).approve(address(POOL), amountIn);
